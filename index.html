@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>日本語学校 卒業記念</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="jp-player">
+    <div class="jp-title">🎓 卒業BGM</div>
+
+    <button onclick="toggleMusic()" id="jpBtn">▶ 再生</button>
+</div>
+
+<audio id="bgm" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function toggleMusic() {
+    const audio = document.getElementById('bgm');
+    const btn = document.getElementById('jpBtn');
+
+    if (audio.paused) {
+        audio.play();
+        btn.innerText = "⏸ 一時停止";
+    } else {
+        audio.pause();
+        btn.innerText = "▶ 再生";
+    }
+}
+</script>
+<div class="sakura"></div>
+    <section class="cover">
+    <h1>🎓 卒業記念</h1>
+    <p>2026年 日本での留学生活</p>
+</section>
+
+<section class="about">
+    <h2>僕のこと</h2>
+    <p id="typing"></p>
+</section>
+
+<!-- 🕒 タイムライン -->
+<section class="timeline">
+    <h2>留学の思い出</h2>
+    <div class="item">2024年4月1日 日本に来ました 🇯🇵</div>
+    <div class="item">2025年7月半 新しい生活に慣れました</div>
+    <div class="item">2025年12月7日 JLPT N2合格</div>
+    <div class="item">2026年3月13日 卒業 🎓</div>
+</section>
+
+<section class="gallery">
+    <h2>思い出の写真</h2>
+    <div class="grid">
+        <img src="p1.jpg">
+        <img src="p2.jpg">
+        <img src="p3.jpg">
+        <img src="p4.jpg">
+        <img src="p5.jpg">
+        <img src="p6.jpg">
+        <img src="p7.jpg">
+        <img src="p8.jpg">
+        <img src="p9.jpg">
+    </div>
+</section>
+
+<!-- 💬 メッセージ -->
+<section class="message">
+    <h2>メッセージ</h2>
+    <button onclick="addComment()">コメントを書く</button>
+    <div id="comments"></div>
+</section>
+
+<!-- 🚀 未来 -->
+<section class="future">
+    <h2>これから</h2>
+    <button onclick="showWish()">クリック</button>
+    <p id="wish"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
