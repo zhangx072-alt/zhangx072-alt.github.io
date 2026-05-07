@@ -11,15 +11,22 @@
   gtag('config', 'G-H5PPJP594E');
 </script>
 <meta charset="UTF-8">
-<title>日本語学校 卒業記念</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本語学校 卒業記念<jp>语言学校毕业纪念页</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<nav class="navbar">
+    <a href="#about">僕のこと</a>
+    <a href="#timeline">留学の生活</a>
+    <a href="#gallery">思い出の写真</a>
+    <a href="#message">メッセージカード</a>
+</nav>
   <div class="jp-player">
     <div class="jp-title">🎓 卒業BGM</div>
 
-    <button onclick="toggleMusic()" id="jpBtn">▶ 再生</button>
+    <button onclick="toggleMusic()" id="jpBtn">▶ 再生/播放</button>
 </div>
 
 <audio id="bgm" loop>
@@ -33,41 +40,42 @@ function toggleMusic() {
 
     if (audio.paused) {
         audio.play();
-        btn.innerText = "⏸ 一時停止";
+        btn.innerText = "⏸ 一時停止/暂停";
     } else {
         audio.pause();
-        btn.innerText = "▶ 再生";
+        btn.innerText = "▶ 再生/播放";
     }
 }
 </script>
 <div class="sakura"></div>
     <section class="cover">
-    <h1>🎓 卒業記念</h1>
-    <p>2026年 日本での留学生活</p>
+    <h1>卒業記念🎓 <br>毕业季</h1>
+    <p>2026年 留学生活</p>
 </section>
 
-<section class="about">
-    <h2>僕のこと</h2>
+<section id="about">
+<img src="avatar.png" class="avatar">
+    <h2>僕のこと<br><span>关于我</span></h2>
     <p id="typing"></p>
 </section>
 
 <!-- 🕒 タイムライン -->
-<section class="timeline">
-    <h2>留学の思い出</h2>
-    <div class="item">2024年4月1日 日本に来ました 🇯🇵</div>
-    <div class="item">2025年7月半 新しい生活に慣れました</div>
-    <div class="item">2025年12月7日 JLPT N2合格</div>
-    <div class="item">2026年3月13日 卒業 🎓</div>
+<section id="timeline">
+    <h2>留学の生活<br><span>留学生活</span></h2>
+    <div class="item">2024年4月1日 日本に来ました 🇯🇵<jp>24年4月1日初到日本</div>
+    <div class="item">2024年10月中旬 新しい生活に慣れました<jp>24年10月中旬开始慢慢习惯这边的生活，干锅牛蛙怎么做来着？</div>
+    <div class="item">2025年12月7日 JLPT N2合格<jp>25年12月N2合格…之后就没怎么学日语了</div>
+    <div class="item">2026年3月13日 卒業 🎓<jp>26年3月13语校毕业，已经过去了两个月</div>
 </section>
 
-<section class="gallery">
-    <h2>思い出の写真</h2>
+<section id="gallery">
+    <h2>思い出の写真<br><span>回忆照片墙</span></h2>
     <div class="grid">
         <img src="p1.jpg">
         <img src="p2.jpg">
         <img src="p3.jpg">
         <img src="p4.jpg">
-        <img src="p5.jpg">
+        <img src="p5.png">
         <img src="p6.jpg">
         <img src="p7.jpg">
         <img src="p8.jpg">
@@ -76,16 +84,31 @@ function toggleMusic() {
 </section>
 
 <!-- 💬 メッセージ -->
-<section class="message">
-    <h2>メッセージ</h2>
-    <button onclick="addComment()">コメントを書く</button>
+<section id="message">
+    <h2>メッセージカード<br><span> 🚀 留言</span></h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="zhangx072-alt/zhangx072-alt.github.io"
+        data-repo-id="R_kgDOSR6J7A"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOSR6J7M4C8iyZ"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="transparent_dark"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+    <button onclick="addComment()">コメントを書く/评论</button>
     <div id="comments"></div>
 </section>
 
 <!-- 🚀 未来 -->
 <section class="future">
-    <h2>これから</h2>
-    <button onclick="showWish()">クリック</button>
+    <h2>これから<br><span>以后的以后</span></h2>
+    <button onclick="showWish()">クリック/点击</button>
     <p id="wish"></p>
 </section>
 
